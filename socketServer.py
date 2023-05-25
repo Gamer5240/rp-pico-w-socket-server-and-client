@@ -58,12 +58,3 @@ if __name__ == "__main__":
     s = SocketServer(host=HOST, port=PORT)
     s.startSocketServer()
     s.handleClientConnectionThread()
-    
-    while True:
-        device = "rp2"
-        value1 = int(input("Enter a value \n"))
-        value2 = int(input("Enter a value \n"))
-        pin = "LED"
-        mode = "pwm"
-        cmd = [{"pin": 14, "value": value1, "mode": mode},{"pin": 15, "value": value2, "mode": "pwm"}]
-        s.sendCommand("rp2", cmd) #command example: [{"pin": pin, "value": value1, "mode": mode},{"pin": 15, "value": value2, "mode": "pwm"}]
