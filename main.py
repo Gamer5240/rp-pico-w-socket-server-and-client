@@ -20,20 +20,16 @@ deviceData = {
         "modes":{
             "PWM":["pins"],
             "Digital":["pins"],
-            "Blinker PWM":["Time","pins"],
-            "Blinker digital":["Time","pins"]
+            "Blinker PWM":["Time","pins"]
             }
         }
     }
 }
 
-SSID1 = "ABACUS."
-PASSWORD1 = "HejkajpaDanesdogaja159"
+SSID = "rp-pico"
+PASSWORD = "rp-pico246"
 
-SSID2 = "rp-pico"
-PASSWORD2 = "rp-pico246"
-
-HOST = "188.230.153.147"
+HOST = ""
 PORT = 5050
 
 FORMAT = "utf-8"
@@ -48,7 +44,7 @@ def connect(ssid, password):
         ip = wlan.ifconfig()[0]
         return wlan
 
-connect(SSID2, PASSWORD2)
+connect(SSID, PASSWORD)
 
 class Server():
     def __init__(self, host, port, deviceData):
